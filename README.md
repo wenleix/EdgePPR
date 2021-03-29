@@ -40,5 +40,14 @@ bin/ParamPPR data/dblp_obj.txt 2191288 data/sample-params.txt data/sample-vecs/v
 ```
 The last parameter `12` is number of threads for computing. You may adjust it based on the number of cores in your machine.
 
-4. TODO: Generate reduced space, etc. 
+4. Run the following command on a high-memory machine (e.g. 128G) to generate reduce space:
+```
+python2.7 src/python/genPriorV.py data/sample-vecs/value bin 1000 3494258 float64 data/basis100.npy
+```
+You can also use reduced precision (`float32`) if the memory is limited (e..g 48G):
+```
+python2.7 src/python/genPriorV.py data/sample-vecs/value bin 1000 3494258 float32 data/basis100.npy
+```
+
+5. TODO: Generate CSC files
 
