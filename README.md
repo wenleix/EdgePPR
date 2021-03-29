@@ -49,5 +49,13 @@ You can also use reduced precision (`float32`) if the memory is limited (e..g 48
 python2.7 src/python/genPriorV.py data/sample-vecs/value bin 1000 3494258 float32 data/basis100.npy
 ```
 
-5. TODO: Generate CSC files
+5. Run the following command to generate matrix `P^{(s)}` for each parameter:
+```
+bin/GenCSRMatrix data/dblp_obj.txt data/mat/p bin
+```
+As discussed in Section 3.3 of the paper, we have:
+```
+P(w) = \sum_s=1^7 w_s P^{(s)}`
+```
+For the DBLP graph case.
 
