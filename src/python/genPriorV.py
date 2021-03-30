@@ -23,7 +23,7 @@ vnpyName = argv[6]
 
 tic = time.time()
 
-pprs = np.zeros((dim, numVec), dtype="float32")
+pprs = np.zeros((dim, numVec), dtype=dtype)
 idx = 0
 for ppr in deimCommon.loadVectors(prefix, suffix, numVec):
     pprs[:, idx] = ppr
